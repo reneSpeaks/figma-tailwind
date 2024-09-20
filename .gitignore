@@ -1,0 +1,9 @@
+# VSCode
+.vscode/*
+
+# Read Me
+**/README.md
+
+# Other Folders
+testcss/*
+css/partials/*
