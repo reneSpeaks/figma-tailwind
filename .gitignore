@@ -4,6 +4,10 @@
 # Read Me
 **/README.md
 
-# Other Folders
-testcss/*
-css/partials/*
+# Node Folder
+node_modules/*
+
+# Package Files after Tailwind Install
+package-lock.json
+package.json
+tailwind.config.js
