@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css.css" />
 
+    <!-- SET STANDARD FONT STYLES -->
+    <style type="text/css">
+      @font-face {
+        font-family: "Primary";
+        src: url(font/Fira_Sans_Extra_Condensed.ttf) format("truetype");
+      }
+      @font-face {
+        font-family: "Secondary";
+        src: url(font/Electrolize.ttf) format("truetype");
+      }
+    </style>
+
     <!-- TAILWIND CSS CDN INCLUDE -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,10 +28,14 @@
         theme: {
           extend: {
             colors: {
-              primary: "#0d324d",
+              primary: "#0000FF",
               secondary: "#208aae",
               accent: "",
               background: "",
+            },
+            fontFamily: {
+              primary: ["Primary", "sans-serif"],
+              secondary: ["Secondary", "sans-serif"],
             },
           },
         },
@@ -29,7 +45,7 @@
   <body>
     <header></header>
     <main>
-      <section></section>
+      <section><h1 class="text-primary font-secondary">Test</h1></section>
       <section></section>
       <section></section>
     </main>
