@@ -6,7 +6,20 @@
     <title>Figma & Tailwind CSS</title>
 
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css.css" />
+    <!-- FONT AWESOME ICONS FOUND HERE: https://fontawesome.com/v6/search?o=r&m=free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- SET THEME FONT STYLES -->
+    <style type="text/css">
+      @font-face {
+        font-family: "Primary";
+        src: url(font/Forum.ttf) format("truetype");
+      }
+      @font-face {
+        font-family: "Secondary";
+        src: url(font/Fira_Sans_Extra_Condensed.ttf) format("truetype");
+      }
+    </style>
 
     <!-- TAILWIND CSS CDN INCLUDE -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,10 +29,14 @@
         theme: {
           extend: {
             colors: {
-              primary: "#0d324d",
-              secondary: "#208aae",
-              accent: "",
-              background: "",
+              primary: "#BFD7B7",
+              secondary: "#BFD7B7",
+              accent: "#CDE895",
+              background: "#2F5651",
+            },
+            fontFamily: {
+              primary: ["Primary", "sans-serif"],
+              secondary: ["Secondary", "sans-serif"],
             },
           },
         },
