@@ -53,7 +53,7 @@
             <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
               <!-- Slide 1 -->
               <div class="w-full h-full flex-shrink-0">
-                <img class="object-cover w-full h-full" src="/img/rooms.jpg" alt="Rooms">
+                <img class="object-cover w-full h-full" src="/img/rooms2.jpg" alt="Rooms">
               </div>
               <!-- Slide 2 -->
               <div class="w-full h-full flex-shrink-0">
@@ -61,11 +61,11 @@
               </div>
               <!-- Slide 3 -->
               <div class="w-full h-full flex-shrink-0">
-                <img class="object-cover w-full h-full" src="/img/outdoorpool1.jpeg" alt="Spa">
+                <img class="object-cover w-full h-full" src="/img/spa.jpg" alt="Spa">
               </div>
               <!-- Slide 4 -->
               <div class="w-full h-full flex-shrink-0">
-                <img class="object-cover w-full h-full" src="/img/view1.jpeg" alt="Our Hotel">
+                <img class="object-cover w-full h-full" src="/img/our-hotel.jpg" alt="Our Hotel">
               </div>
             </div>
           
@@ -93,12 +93,40 @@
                 slider.style.transform = `translateX(-${100 * index}%)`;
               }
             }
+            // Auto-slide every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % 4; // Loops through 4 slides
+  goToSlide(currentIndex);
+}, 5000);
+
           </script>
           
-          </div>
+          <div class="bg-scroll ..." style="background-image: url(/img/balcony1.jpeg)"></div>
           
-        </section>
+        </section >
       </section>
+      <div class="relative w-full h-screen bg-cover bg-center" style="background-image: url('/path-to-your-background-image.jpg');">
+  <!-- Overlay for darker background -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+    
+    <!-- Title -->
+    <h1 class="text-accent font-primary text-5xl sm:text-6xl md:text-7xl font-bold mb-8">
+      Book a Room
+    </h1>
+    
+    <!-- Buttons -->
+    <div class="relative group">
+      <div class="bg-cover bg-center h-96" style="background-image: url('/img/booknow.jpg');"></div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex justify-center space-x-4">
+        <button class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out w-1/2">
+          Book Now
+        </button>
+        <button class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out w-1/2">
+          Check Availability
+        </button>
+      </div>
+    </div>
+
       <section></section>
       <section></section>
     </main>
