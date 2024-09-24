@@ -15,6 +15,7 @@
         font-family: "Primary";
         src: url(font/Forum.ttf) format("truetype");
       }
+
       @font-face {
         font-family: "Secondary";
         src: url(font/Fira_Sans_Extra_Condensed.ttf) format("truetype");
@@ -43,6 +44,7 @@
       };
     </script>
   </head>
+
   <body>
     <header>
       <div class="bg-background text-white py-4 px-8 flex justify-between items-center">
@@ -75,6 +77,178 @@
       
     </header>
     <main>
+      <!-- Slider Section -->
+      <div class="relative overflow-hidden w-screen h-screen bg-background mb-0">
+        <!-- Slider Container -->
+        <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
+          <!-- Slide 1 -->
+          <div class="w-full h-full flex-shrink-0">
+            <img class="object-cover w-full h-full" src="/img/booknow.jpg" alt="Rooms" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="w-full h-full flex-shrink-0">
+            <img class="object-cover w-full h-full" src="/img/finedining.jpg" alt="Fine Dining" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="w-full h-full flex-shrink-0">
+            <img class="object-cover w-full h-full" src="/img/spa.jpg" alt="Spa" />
+          </div>
+          <!-- Slide 4 -->
+          <div class="w-full h-full flex-shrink-0">
+            <img class="object-cover w-full h-full" src="/img/our-hotel.jpg" alt="Our Hotel" />
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(0)">
+            Rooms
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(1)">
+            Fine Dining
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(2)">
+            Spa
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(3)">
+            Our Hotel
+          </button>
+        </div>
+      </div>
+      <div class="container mx-auto py-16">
+        <!-- Hotel Information Section -->
+        <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
+          <!-- Hotel History Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-primary font-bold text-background">Our Story</h2>
+              <p class="text-lg text-primary mt-4">
+                Nestled in the heart of nature, our hotel has a rich history dating back to the early 1900s. From its
+                humble beginnings, it has grown into a luxurious retreat where guests can experience comfort, elegance,
+                and tranquility. Our commitment to hospitality has made us a timeless destination for those seeking the
+                perfect escape.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                src="/img/ourstory.jpg"
+                alt="Our Story"
+                class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Fine Dining Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-primary font-bold text-background">Fine Dining</h2>
+              <p class="text-lg text-primary mt-4">
+                Our fine dining restaurant offers an exceptional culinary experience. From locally sourced ingredients
+                to expertly crafted dishes, each meal is a celebration of flavor and creativity. Enjoy your meal in an
+                intimate setting with views that enhance the gourmet experience.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                src="/img/finedining2.jpg"
+                alt="Fine Dining"
+                class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Spa Experience Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-primary font-bold text-background">Our Spa</h2>
+              <p class="text-lg text-primary mt-4">
+                Rejuvenate your mind, body, and soul at our award-winning spa. Step into a world of tranquility where
+                luxurious treatments meet natural serenity. Whether you're enjoying a calming massage, an invigorating
+                facial, or a peaceful soak in our heated outdoor pool, our spa is designed to restore balance and
+                harmony.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                src="/img/spa2.jpg"
+                alt="Spa"
+                class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Outdoor Activities Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-primary font-bold text-background">Outdoor Activities</h2>
+              <p class="text-lg text-primary mt-4">
+                Our outdoor activities are designed to bring you closer to nature. Whether you're hiking in the
+                mountains, enjoying a campfire under the stars, or simply taking a stroll through our scenic grounds,
+                you'll find plenty of ways to connect with the great outdoors.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2">
+              <img
+                src="/img/outdooractivities.jpg"
+                alt="Outdoor Activities"
+                class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing Remark -->
+        <section class="text-center mt-16">
+          <p class="text-2xl font-primary font-bold text-background text-lg text-primary mt-4">
+            At Off Grid Boutique Hotel, we are more than just a place to stay – we are a destination. Discover the
+            perfect balance of luxury, comfort, and adventure. Your unforgettable experience awaits.
+          </p>
+        </section>
+      </div>
+
+      <!-- "Book a Room" Section -->
+      <div class="relative w-full h-screen bg-cover bg-center mb-2" style="background-image: url('/img/rooms4.jpg')">
+        <!-- Overlay for darker background -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
+          <!-- Title -->
+          <h1 class="text-accent font-primary text-5xl sm:text-6xl md:text-7xl font-bold mb-8">Book a Room</h1>
+
+          <!-- Buttons -->
+          <div class="space-x-4">
+            <!-- Book Now Button -->
+            <button
+              class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out">
+              Book Now
+            </button>
+            <!-- Check Availability Button -->
+            <button
+              class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out">
+              Check Availability
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Slide Index Tracker
+        let currentIndex = 0;
+
+        // Function to Go to Specific Slide
+        function goToSlide(index) {
+          const slider = document.getElementById("slider");
+          const totalSlides = slider.children.length;
+
+          if (index >= 0 && index < totalSlides) {
+            currentIndex = index;
+            // Shift the slider to the related slide
+            slider.style.transform = `translateX(-${100 * index}%)`;
+          }
+        }
+      </script>
       <section id="masonry" class="flex flex-col items-center mt-5">
         <div class="border-t-2 border-t-background rounded-full w-full max-w-[700px] p-5"></div>
 
