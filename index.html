@@ -46,7 +46,36 @@
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <div class="bg-background text-white py-4 px-8 flex justify-between items-center">
+        <!-- Logo/Icon -->
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Offgridboutique logo" class="h-12">
+        </div>
+         <!-- Hamburger Icon for Mobile -->
+         <div class="md:hidden">
+          <button id="menu-btn" class="text-white">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+        <!-- Navigation -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6">
+          <ul class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-6">
+            <li><a href="#home" class="hover:text-accent">Home</a></li>
+            <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
+            <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
+            <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
+            <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+          </ul>
+        </nav>
+      
+        <!-- Book Now Button -->
+        <div>
+          <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
+        </div>
+      </div>
+      
+    </header>
     <main>
       <!-- Slider Section -->
       <div class="relative overflow-hidden w-screen h-screen bg-background mb-0">
