@@ -46,9 +46,186 @@
   <body>
     <header></header>
     <main>
-      <section></section>
-      <section></section>
-      <section></section>
+      <section id="masonry" class="flex flex-col items-center mt-5">
+        <div class="border-t-2 border-t-background rounded-full w-full max-w-[700px] p-5"></div>
+
+        <h2 class="text-3xl text-background md:text-5xl font-primary txt-center max-w-[700px] p-5">
+          Enjoy and join the handful of guests who already sent their best photographic memories of their stay.
+        </h2>
+
+        <div class="border-b-2 border-b-background rounded-full w-full max-w-[700px] p-5"></div>
+
+        <div class="flex flex-row justify-evenly max-w-80 w-full">
+          <div class="relative group">
+            <a class="transition-all duration-300 hover:text-accent text-background" href="#facebook">Facebook</a>
+            <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all group-hover:w-full"></span>
+          </div>
+          <div class="relative group">
+            <a class="transition-all duration-300 hover:text-accent text-background" href="#instagram">Instagram</a>
+            <span class="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent transition-all group-hover:w-full"></span>
+          </div>
+        </div>
+
+        <div id="masonry-gallery" class="columns-2 md:columns-4 p-5">
+          <div class="flex flex-col">
+            <figure>
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-03.jpg"
+                alt="" />
+            </figure>
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-01.jpg"
+                alt="" />
+            </figure>
+          </div>
+          <div class="flex flex-col">
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-09.jpg"
+                alt="" />
+            </figure>
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-12.jpg"
+                alt="" />
+            </figure>
+          </div>
+          <div class="flex flex-col">
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-19.jpg"
+                alt="" />
+            </figure>
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-22.jpg"
+                alt="" />
+            </figure>
+          </div>
+          <div class="flex flex-col">
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-18.jpg"
+                alt="" />
+            </figure>
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-08.jpg"
+                alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="bg-background p-5 flex flex-col border-t-4 border-b-4 border-accent">
+        <h2 class="text-3xl md:text-5xl text-accent text-center font-primary my-4">
+          Hear what our visitors have to say!
+        </h2>
+
+        <div class="flex items-center md:justify-center flex-col md:flex-row">
+          <article class="font-primary p-5 max-w-80">
+            <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
+            <div class="text-accent flex flex-row justify-center">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <p class="p-2 mt-4">
+              "My stay at [Hotel Name] was simply magical! From the moment we arrived, the staff went above and beyond
+              to make sure we felt welcome. The rooms were spotless, and the view from our balcony was breathtaking. The
+              proximity to local attractions made it easy for us to explore, but we were just as happy lounging by the
+              beautiful pool. Can't wait to come back!"
+            </p>
+
+            <footer class="text-center pt-4 italic">Sarah P., New York, NY</footer>
+            <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
+          </article>
+
+          <article class="font-primary p-5 max-w-80">
+            <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
+            <div class="text-accent flex flex-row justify-center">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="p-2 mt-4">
+              "This hotel truly exceeded our expectations! The décor was modern and elegant, and the service was
+              impeccable. We dined at the on-site restaurant and had one of the best meals of our trip. The little
+              touches, like complimentary champagne upon check-in, made our anniversary celebration extra special.
+              Highly recommend for couples looking for a romantic escape!"
+            </p>
+
+            <footer class="text-center pt-4 italic">John and Emily W., Chicago, IL</footer>
+            <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
+          </article>
+
+          <article class="font-primary p-5 max-w-80 hidden lg:block">
+            <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
+            <div class="text-accent flex flex-row justify-center">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="p-2 mt-4">
+              "We spent a week at [Hotel Name] with our two kids, and it was perfect for families. The kids loved the
+              children's activities and the pool, while my wife and I enjoyed the spa and fitness center. The location
+              is ideal, with plenty of family-friendly attractions nearby. The staff was friendly and always ready to
+              assist, making our stay stress-free and enjoyable. We'll definitely be back next summer!"
+            </p>
+
+            <footer class="text-center pt-4 italic">Michael R., Dallas, TX</footer>
+            <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
+          </article>
+
+          <article class="font-primary p-5 max-w-80 hidden xl:block">
+            <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
+            <div class="text-accent flex flex-row justify-center">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="p-2 mt-4">
+              "I often travel for work, and [Hotel Name] was the best hotel I've stayed at in years. The rooms were
+              quiet and comfortable, making it easy to focus and unwind after long meetings. The business center had
+              everything I needed, and the hotel's central location meant I could walk to most of my appointments. Fast
+              Wi-Fi, great room service, and a friendly staff – highly recommend for business travelers!"
+            </p>
+
+            <footer class="text-center pt-4 italic">David K., San Francisco, CA</footer>
+            <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
+          </article>
+
+          <article class="font-primary p-5 max-w-80 hidden 2xl:block">
+            <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
+            <div class="text-accent flex flex-row justify-center">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p class="p-2 mt-4">
+              "I can't say enough good things about our stay at [Hotel Name]. The attention to detail, from the
+              beautifully designed rooms to the exceptional customer service, made our vacation unforgettable. The
+              concierge gave us fantastic recommendations for local dining and activities. Whether you're looking for
+              luxury, comfort, or convenience, this hotel delivers on all fronts. We'll definitely be returning!"
+            </p>
+
+            <footer class="text-center pt-4 italic">Jessica M., London, UK</footer>
+            <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
+          </article>
+        </div>
+        <div class="text-accent text-center">
+          <i class="fa-brands fa-google"></i> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+      </section>
     </main>
     <footer></footer>
 
