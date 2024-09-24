@@ -46,7 +46,59 @@
   <body>
     <header></header>
     <main>
-      <section></section>
+      <section>
+        <section>
+          <div class="relative overflow-hidden w-screen h-screen bg-background">
+            <!-- Slider Container -->
+            <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
+              <!-- Slide 1 -->
+              <div class="w-full h-full flex-shrink-0">
+                <img class="object-cover w-full h-full" src="/img/rooms.jpg" alt="Rooms">
+              </div>
+              <!-- Slide 2 -->
+              <div class="w-full h-full flex-shrink-0">
+                <img class="object-cover w-full h-full" src="/img/finedining.jpg" alt="Fine Dining">
+              </div>
+              <!-- Slide 3 -->
+              <div class="w-full h-full flex-shrink-0">
+                <img class="object-cover w-full h-full" src="/img/outdoorpool1.jpeg" alt="Spa">
+              </div>
+              <!-- Slide 4 -->
+              <div class="w-full h-full flex-shrink-0">
+                <img class="object-cover w-full h-full" src="/img/view1.jpeg" alt="Our Hotel">
+              </div>
+            </div>
+          
+            <!-- Navigation Buttons -->
+            <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
+              <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary" onclick="goToSlide(0)">Rooms</button>
+              <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary" onclick="goToSlide(1)">Fine Dining</button>
+              <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary" onclick="goToSlide(2)">Spa</button>
+              <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary" onclick="goToSlide(3)">Our Hotel</button>
+            </div>
+          </div>
+          
+          <script>
+            // Slide Index Tracker
+            let currentIndex = 0;
+          
+            // Function to Go to Specific Slide
+            function goToSlide(index) {
+              const slider = document.getElementById('slider');
+              const totalSlides = slider.children.length;
+              
+              if (index >= 0 && index < totalSlides) {
+                currentIndex = index;
+                // Shift the slider to the related slide
+                slider.style.transform = `translateX(-${100 * index}%)`;
+              }
+            }
+          </script>
+          
+          </div>
+          
+        </section>
+      </section>
       <section></section>
       <section></section>
     </main>
