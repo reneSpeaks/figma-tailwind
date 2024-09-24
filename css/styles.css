@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+html {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -23,12 +27,4 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-}
-
-#hero {
-  background-image: url();
 }
