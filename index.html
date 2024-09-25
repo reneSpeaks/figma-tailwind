@@ -53,10 +53,25 @@
           <img src="images/logo.jpg" alt="Offgridboutique logo" class="h-12" />
         </div>
         <!-- Hamburger Icon for Mobile -->
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-white">
-            <i class="fas fa-bars fa-2x"></i>
-          </button>
+        <div id="hamburger" class="md:hidden relative flex">
+          <label class="burger" for="burger">
+            <input type="checkbox" id="burger" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown z-50 bg-background bg-opacity-50 w-screen px-8 absolute justify-self-center top-14">
+              <ul class="flex flex-col py-2 text-center">
+                <li><a href="#home" class="hover:text-accent">Home</a></li>
+                <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
+                <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
+                <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
+                <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+              </ul>
+            </div>
+          </label>
         </div>
         <!-- Navigation -->
         <nav id="nav-menu" class="hidden md:flex space-x-6">
