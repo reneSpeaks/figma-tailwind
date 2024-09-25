@@ -52,8 +52,8 @@
         <div class="logo">
           <img src="images/logo-no-background.png" alt="Offgridboutique logo" class="h-12">
         </div>
-         <!-- Hamburger Icon for Mobile -->
-         <div class="md:hidden">
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden">
           <button id="menu-btn" class="text-white">
             <i class="fas fa-bars fa-2x"></i>
           </button>
@@ -68,13 +68,12 @@
             <li><a href="#contact" class="hover:text-accent">Contact</a></li>
           </ul>
         </nav>
-      
+
         <!-- Book Now Button -->
         <div>
           <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
         </div>
       </div>
-      
     </header>
     <main>
 
@@ -87,24 +86,24 @@
         </div>
       </section>
       <!-- Slider Section -->
-      <div class="relative overflow-hidden w-screen h-screen bg-background mb-0">
+      <section class="relative overflow-hidden w-screen h-screen bg-background mb-0">
         <!-- Slider Container -->
         <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
           <!-- Slide 1 -->
           <div class="w-full h-full flex-shrink-0">
-            <img class="object-cover w-full h-full" src="/img/booknow.jpg" alt="Rooms" />
+            <img class="object-cover w-full h-full" src="img/booknow.jpg" alt="Rooms" />
           </div>
           <!-- Slide 2 -->
           <div class="w-full h-full flex-shrink-0">
-            <img class="object-cover w-full h-full" src="/img/finedining.jpg" alt="Fine Dining" />
+            <img class="object-cover w-full h-full" src="img/finedining.jpg" alt="Fine Dining" />
           </div>
           <!-- Slide 3 -->
           <div class="w-full h-full flex-shrink-0">
-            <img class="object-cover w-full h-full" src="/img/spa.jpg" alt="Spa" />
+            <img class="object-cover w-full h-full" src="img/spa.jpg" alt="Spa" />
           </div>
           <!-- Slide 4 -->
           <div class="w-full h-full flex-shrink-0">
-            <img class="object-cover w-full h-full" src="/img/our-hotel.jpg" alt="Our Hotel" />
+            <img class="object-cover w-full h-full" src="img/our-hotel.jpg" alt="Our Hotel" />
           </div>
         </div>
 
@@ -133,8 +132,8 @@
             Our Hotel
           </button>
         </div>
-      </div>
-      <div class="container mx-auto py-16">
+      </section>
+      <section class="container mx-auto py-16">
         <!-- Hotel Information Section -->
         <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
           <!-- Hotel History Section -->
@@ -150,7 +149,7 @@
             </div>
             <div class="w-full md:w-1/2">
               <img
-                src="/img/ourstory.jpg"
+                src="img/ourstory.jpg"
                 alt="Our Story"
                 class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
             </div>
@@ -168,7 +167,7 @@
             </div>
             <div class="w-full md:w-1/2">
               <img
-                src="/img/finedining2.jpg"
+                src="img/finedining2.jpg"
                 alt="Fine Dining"
                 class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
             </div>
@@ -187,7 +186,7 @@
             </div>
             <div class="w-full md:w-1/2">
               <img
-                src="/img/spa2.jpg"
+                src="img/spa2.jpg"
                 alt="Spa"
                 class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
             </div>
@@ -205,7 +204,7 @@
             </div>
             <div class="w-full md:w-1/2">
               <img
-                src="/img/outdooractivities.jpg"
+                src="img/outdooractivities.jpg"
                 alt="Outdoor Activities"
                 class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
             </div>
@@ -213,16 +212,16 @@
         </div>
 
         <!-- Closing Remark -->
-        <section class="text-center mt-16">
-          <p class="text-2xl font-primary font-bold text-background text-lg text-primary mt-4">
+        <div class="text-center mt-16">
+          <p class="text-2xl font-primary font-bold text-background text-primary mt-4">
             At Off Grid Boutique Hotel, we are more than just a place to stay – we are a destination. Discover the
             perfect balance of luxury, comfort, and adventure. Your unforgettable experience awaits.
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- "Book a Room" Section -->
-      <div class="relative w-full h-screen bg-cover bg-center mb-2" style="background-image: url('/img/rooms4.jpg')">
+      <section class="relative w-full h-screen bg-cover bg-center mb-2" style="background-image: url('img/rooms4.jpg')">
         <!-- Overlay for darker background -->
         <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
           <!-- Title -->
@@ -242,24 +241,8 @@
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <script>
-        // Slide Index Tracker
-        let currentIndex = 0;
-
-        // Function to Go to Specific Slide
-        function goToSlide(index) {
-          const slider = document.getElementById("slider");
-          const totalSlides = slider.children.length;
-
-          if (index >= 0 && index < totalSlides) {
-            currentIndex = index;
-            // Shift the slider to the related slide
-            slider.style.transform = `translateX(-${100 * index}%)`;
-          }
-        }
-      </script>
       <section id="masonry" class="flex flex-col items-center mt-5">
         <div class="border-t-2 border-t-background rounded-full w-full max-w-[700px] p-5"></div>
 
@@ -441,7 +424,26 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="bg-background text-primary p-3">
+      <div class="grid grid-cols-2 gap-4 m-2">
+        <div>
+          <p id="#" class="text-sm"><i class="fa-regular fa-copyright mr-2"></i>All rights reserved</p>
+        </div>
+        <div>
+          <p class="text-center ml-2">
+            <i class="fa-brands fa-facebook-f mr-2"></i>
+            <i class="fa-brands fa-square-instagram mr-2"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </p>
+        </div>
+      </div>
+
+      <p class="ml-2 text-sm">
+        <span class="transition-colors">
+          <a href="#top">Privacy policy</a>&nbsp; &nbsp; <a href="#top">General terms and conditions</a>
+        </span>
+      </p>
+    </footer>
 
     <script src="js/scripts.js" defer></script>
   </body>
