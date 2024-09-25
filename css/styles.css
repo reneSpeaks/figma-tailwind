@@ -31,12 +31,6 @@ h6 {
 
 /* RESPONSIVENESS FOR NESRIN IMAGES */
 
-.infoimages {
-  max-width: 100%;
-  height: auto;
-  max-height: 600px; /* Limit image height */
-}
-
 .max-h-96 {
   max-height: 24rem; /* Adjusts to smaller screens for responsive design */
 }
@@ -53,48 +47,7 @@ h6 {
   }
 }
 
-.burger {
-  position: relative;
-  width: 40px;
-  height: 30px;
-  background: transparent;
-  cursor: pointer;
-  display: block;
-}
-
-.burger input {
-  display: none;
-}
-
-.burger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #CDE895;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: 0.25s ease-in-out;
-}
-
-.burger span:nth-of-type(1) {
-  top: 0px;
-  transform-origin: left center;
-}
-
-.burger span:nth-of-type(2) {
-  top: 50%;
-  transform: translateY(-50%);
-  transform-origin: left center;
-}
-
-.burger span:nth-of-type(3) {
-  top: 100%;
-  transform-origin: left center;
-  transform: translateY(-100%);
-}
+/* Burger menu change on click */
 
 .burger input:checked ~ span:nth-of-type(1) {
   transform: rotate(45deg);
@@ -111,12 +64,6 @@ h6 {
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
-}
-
-.dropdown {
-  display: none;
-  transform: translate(-43%, 0%);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .burger input:checked ~ .dropdown {
