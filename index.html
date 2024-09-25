@@ -1,241 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma & Tailwind CSS</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Figma & Tailwind CSS</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- FONT AWESOME ICONS FOUND HERE: https://fontawesome.com/v6/search?o=r&m=free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
-  <link rel="stylesheet" href="css/styles.css" />
-  <!-- FONT AWESOME ICONS FOUND HERE: https://fontawesome.com/v6/search?o=r&m=free -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- SET THEME FONT STYLES -->
+    <style type="text/css">
+      @font-face {
+        font-family: "Primary";
+        src: url(font/Forum.ttf) format("truetype");
+      }
 
-  <!-- SET THEME FONT STYLES -->
-  <style type="text/css">
-    @font-face {
-      font-family: "Primary";
-      src: url(font/Forum.ttf) format("truetype");
-    }
+      @font-face {
+        font-family: "Secondary";
+        src: url(font/Fira_Sans_Extra_Condensed.ttf) format("truetype");
+      }
+    </style>
 
-    @font-face {
-      font-family: "Secondary";
-      src: url(font/Fira_Sans_Extra_Condensed.ttf) format("truetype");
-    }
-  </style>
-
-  <!-- TAILWIND CSS CDN INCLUDE -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      content: ["./src/**/*.{html,js}"],
-      theme: {
-        extend: {
-          colors: {
-            primary: "#BFD7B7",
-            secondary: "#BFD7B7",
-            accent: "#CDE895",
-            background: "#2F5651",
-          },
-          fontFamily: {
-            primary: ["Primary", "sans-serif"],
-            secondary: ["Secondary", "sans-serif"],
+    <!-- TAILWIND CSS CDN INCLUDE -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        content: ["./src/**/*.{html,js}"],
+        theme: {
+          extend: {
+            colors: {
+              primary: "#BFD7B7",
+              secondary: "#BFD7B7",
+              accent: "#CDE895",
+              background: "#2F5651",
+            },
+            fontFamily: {
+              primary: ["Primary", "sans-serif"],
+              secondary: ["Secondary", "sans-serif"],
+            },
           },
         },
-      },
-    };
-  </script>
-</head>
+      };
+    </script>
+  </head>
 
-<body>
-  <header>
-    <div class="bg-background text-white py-4 px-8 flex justify-between items-center">
-      <!-- Logo/Icon -->
-      <div class="logo">
-        <img src="images/logo.jpg" alt="Offgridboutique logo" class="h-12" />
+  <body>
+    <header>
+      <div class="bg-background text-white py-4 px-8 flex justify-between items-center">
+        <!-- Logo/Icon -->
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Offgridboutique logo" class="h-12" />
+        </div>
+        <!-- Hamburger Icon for Mobile -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white">
+            <i class="fas fa-bars fa-2x"></i>
+          </button>
+        </div>
+        <!-- Navigation -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6">
+          <ul class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-6">
+            <li><a href="#home" class="hover:text-accent">Home</a></li>
+            <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
+            <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
+            <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
+            <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Book Now Button -->
+        <div>
+          <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
+        </div>
       </div>
-      <!-- Hamburger Icon for Mobile -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-white">
-          <i class="fas fa-bars fa-2x"></i>
-        </button>
-      </div>
-      <!-- Navigation -->
-      <nav id="nav-menu" class="hidden md:flex space-x-6">
-        <ul class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-6">
-          <li><a href="#home" class="hover:text-accent">Home</a></li>
-          <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
-          <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
-          <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
-          <li><a href="#contact" class="hover:text-accent">Contact</a></li>
-        </ul>
-      </nav>
+    </header>
+    <main>
+      <!-- Slider Section -->
+      <section class="relative overflow-hidden w-screen h-screen bg-background mb-0">
+        <!-- Slider Container -->
+        <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
+          <!-- Slide 1 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/booknow.jpg" alt="Rooms" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/finedining.jpg" alt="Fine Dining" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/spa.jpg" alt="Spa" />
+          </div>
+          <!-- Slide 4 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/our-hotel.jpg" alt="Our Hotel" />
+          </div>
+        </div>
 
-      <!-- Book Now Button -->
-<div>
-  <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
-</div>
-</div>
-</header>
-<main>
-  <!-- Slider Section -->
-  <section class="relative overflow-hidden w-screen h-screen bg-background mb-0">
-    <!-- Slider Container -->
-    <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
-      <!-- Slide 1 -->
-      <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-        <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/booknow.jpg" alt="Rooms" />
-      </div>
-      <!-- Slide 2 -->
-      <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-        <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/finedining.jpg" alt="Fine Dining" />
-      </div>
-      <!-- Slide 3 -->
-      <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-        <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/spa.jpg" alt="Spa" />
-      </div>
-      <!-- Slide 4 -->
-      <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-        <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/our-hotel.jpg" alt="Our Hotel" />
-      </div>
-    </div>
+        <!-- Navigation Buttons -->
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(0)">
+            Rooms
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(1)">
+            Fine Dining
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(2)">
+            Spa
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(3)">
+            Our Hotel
+          </button>
+        </div>
+      </section>
 
-    <!-- Navigation Buttons -->
-    <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
-      <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-        onclick="goToSlide(0)">
-        Rooms
-      </button>
-      <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-        onclick="goToSlide(1)">
-        Fine Dining
-      </button>
-      <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-        onclick="goToSlide(2)">
-        Spa
-      </button>
-      <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-        onclick="goToSlide(3)">
-        Our Hotel
-      </button>
-    </div>
-  </section>
+      <!-- Hotel Information Section -->
+      <section style="background-color: #2f5651" class="text-primary font-primary">
+        <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
+          <!-- Our Story Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-background">Our Story</h2>
+              <p class="text-lg mt-4">
+                Nestled in the heart of nature, our hotel has a rich history dating back to the early 1900s. From its
+                humble beginnings, it has grown into a luxurious retreat where guests can experience comfort, elegance,
+                and tranquility. Our commitment to hospitality has made us a timeless destination for those seeking the
+                perfect escape.
+              </p>
+            </div>
+            <!-- Image Section with Responsive Sizing -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/ourstory.jpg"
+                alt="Our Story"
+                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+          </div>
 
-  <!-- Hotel Information Section -->
-<section style="background-color: #2F5651;" class="text-primary font-primary">
-  <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
-    
-    <!-- Our Story Section -->
-    <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-      <!-- Text Section -->
-      <div class="w-full md:w-1/2">
-        <h2 class="text-3xl font-bold text-background">Our Story</h2>
-        <p class="text-lg mt-4">
-          Nestled in the heart of nature, our hotel has a rich history dating back to the early 1900s. From its
-          humble beginnings, it has grown into a luxurious retreat where guests can experience comfort, elegance,
-          and tranquility. Our commitment to hospitality has made us a timeless destination for those seeking the
-          perfect escape.
-        </p>
-      </div>
-      <!-- Image Section with Responsive Sizing -->
-      <div class="w-full md:w-1/2">
-        <img
-          src="img/ourstory.jpg"
-          alt="Our Story"
-          class="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
-      </div>
-    </div>
+          <!-- Fine Dining Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Image Section with Responsive Sizing -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/finedining2.jpg"
+                alt="Fine Dining"
+                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-background">Fine Dining</h2>
+              <p class="text-lg mt-4">
+                Our fine dining restaurant offers an exceptional culinary experience. From locally sourced ingredients
+                to expertly crafted dishes, each meal is a celebration of flavor and creativity. Enjoy your meal in an
+                intimate setting with views that enhance the gourmet experience.
+              </p>
+            </div>
+          </div>
 
-    <!-- Fine Dining Section -->
-    <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-      <!-- Image Section with Responsive Sizing -->
-      <div class="w-full md:w-1/2">
-        <img
-          src="img/finedining2.jpg"
-          alt="Fine Dining"
-          class="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
-      </div>
-      <!-- Text Section -->
-      <div class="w-full md:w-1/2">
-        <h2 class="text-3xl font-bold text-background">Fine Dining</h2>
-        <p class="text-lg mt-4">
-          Our fine dining restaurant offers an exceptional culinary experience. From locally sourced ingredients
-          to expertly crafted dishes, each meal is a celebration of flavor and creativity. Enjoy your meal in an
-          intimate setting with views that enhance the gourmet experience.
-        </p>
-      </div>
-    </div>
+          <!-- Spa Experience Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Text Section (left) -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-background">Our Spa</h2>
+              <p class="text-lg mt-4">
+                Rejuvenate your mind, body, and soul at our award-winning spa. Step into a world of tranquility where
+                luxurious treatments meet natural serenity. Whether you're enjoying a calming massage, an invigorating
+                facial, or a peaceful soak in our heated outdoor pool, our spa is designed to restore balance and
+                harmony.
+              </p>
+            </div>
+            <!-- Image Section (right) -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/spa2.jpg"
+                alt="Spa"
+                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+          </div>
 
-    <!-- Spa Experience Section -->
-<div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-  <!-- Text Section (left) -->
-  <div class="w-full md:w-1/2">
-    <h2 class="text-3xl font-bold text-background">Our Spa</h2>
-    <p class="text-lg mt-4">
-      Rejuvenate your mind, body, and soul at our award-winning spa. Step into a world of tranquility where
-      luxurious treatments meet natural serenity. Whether you're enjoying a calming massage, an invigorating
-      facial, or a peaceful soak in our heated outdoor pool, our spa is designed to restore balance and
-      harmony.
-    </p>
-  </div>
-  <!-- Image Section (right) -->
-  <div class="w-full md:w-1/2">
-    <img
-      src="img/spa2.jpg"
-      alt="Spa"
-      class="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
-  </div>
-</div>
+          <!-- Outdoor Activities Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Image Section (left) -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/outdooractivities.jpg"
+                alt="Outdoor Activities"
+                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+            <!-- Text Section (right) -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-background">Outdoor Activities</h2>
+              <p class="text-lg mt-4">
+                Our outdoor activities are designed to bring you closer to nature. Whether you're hiking in the
+                mountains, enjoying a campfire under the stars, or simply taking a stroll through our scenic grounds,
+                you'll find plenty of ways to connect with the great outdoors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<!-- Outdoor Activities Section -->
-<div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-  <!-- Image Section (left) -->
-  <div class="w-full md:w-1/2">
-    <img
-      src="img/outdooractivities.jpg"
-      alt="Outdoor Activities"
-      class="rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
-  </div>
-  <!-- Text Section (right) -->
-  <div class="w-full md:w-1/2">
-    <h2 class="text-3xl font-bold text-background">Outdoor Activities</h2>
-    <p class="text-lg mt-4">
-      Our outdoor activities are designed to bring you closer to nature. Whether you're hiking in the
-      mountains, enjoying a campfire under the stars, or simply taking a stroll through our scenic grounds,
-      you'll find plenty of ways to connect with the great outdoors.
-    </p>
-  </div>
-</div>
-</section>
+      <!-- New section with white background -->
+      <section style="background-color: #ffffff">
+        <!-- Additional content goes here -->
+      </section>
 
-<!-- New section with white background -->
-<section style="background-color: #ffffff;">
-<!-- Additional content goes here -->
-</section>
-
-<!-- CSS for Responsive and Styling Adjustments -->
-<style>
-  img {
-    max-width: 100%;
-    height: auto;
-    max-height: 600px; /* Limit image height */
-  }
-
-  .max-h-96 {
-    max-height: 24rem; /* Adjusts to smaller screens for responsive design */
-  }
-
-  @media (max-width: 768px) {
-    .max-h-96 {
-      max-height: 18rem; /* Smaller image heights for tablet size screens */
-    }
-  }
-
-  @media (max-width: 640px) {
-    .max-h-96 {
-      max-height: 14rem; /* Smaller image heights for mobile devices */
-    }
-  }
-</style>
       <section id="masonry" class="flex flex-col items-center mt-5">
         <div class="border-t-2 border-t-background rounded-full w-full max-w-[700px] p-5"></div>
 
@@ -259,42 +238,58 @@
         <div id="masonry-gallery" class="columns-2 md:columns-4 p-5">
           <div class="flex flex-col">
             <figure>
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-03.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-03.jpg"
+                alt="" />
             </figure>
             <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-01.jpg" alt="" />
-            </figure>
-          </div>
-          <div class="flex flex-col">
-            <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-09.jpg" alt="" />
-            </figure>
-            <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-12.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-01.jpg"
+                alt="" />
             </figure>
           </div>
           <div class="flex flex-col">
             <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-19.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-09.jpg"
+                alt="" />
             </figure>
             <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-22.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-12.jpg"
+                alt="" />
             </figure>
           </div>
           <div class="flex flex-col">
             <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-18.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-19.jpg"
+                alt="" />
             </figure>
             <figure class="relative">
-              <img class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
-                src="img/masonry/aguasdeibiza-instagram-08.jpg" alt="" />
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-22.jpg"
+                alt="" />
+            </figure>
+          </div>
+          <div class="flex flex-col">
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-18.jpg"
+                alt="" />
+            </figure>
+            <figure class="relative">
+              <img
+                class="w-full mb-4 rounded-xl hover:scale-105 transition-all duration-300"
+                src="img/masonry/aguasdeibiza-instagram-08.jpg"
+                alt="" />
             </figure>
           </div>
         </div>
@@ -308,15 +303,15 @@
           <article class="font-primary p-5 max-w-80">
             <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
             <div class="text-accent flex flex-row justify-center">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
             </div>
 
             <p class="p-2 mt-4">
-              "My stay at Off Grid Boutique was simply magical! From the moment we arrived, the staff went above and beyond
-              to make sure we felt welcome. The rooms were spotless, and the view from our balcony was breathtaking. The
-              proximity to local attractions made it easy for us to explore, but we were just as happy lounging by the
-              beautiful pool. Can't wait to come back!"
+              "My stay at Off Grid Boutique was simply magical! From the moment we arrived, the staff went above and
+              beyond to make sure we felt welcome. The rooms were spotless, and the view from our balcony was
+              breathtaking. The proximity to local attractions made it easy for us to explore, but we were just as happy
+              lounging by the beautiful pool. Can't wait to come back!"
             </p>
 
             <footer class="text-center pt-4 italic">Sarah P., New York, NY</footer>
@@ -326,8 +321,8 @@
           <article class="font-primary p-5 max-w-80">
             <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
             <div class="text-accent flex flex-row justify-center">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
             </div>
 
             <p class="p-2 mt-4">
@@ -344,15 +339,15 @@
           <article class="font-primary p-5 max-w-80 hidden lg:block">
             <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
             <div class="text-accent flex flex-row justify-center">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
             </div>
 
             <p class="p-2 mt-4">
-              "We spent a week at Off Grid Boutique with our two kids, and it was perfect for families. The kids loved the
-              children's activities and the pool, while my wife and I enjoyed the spa and fitness center. The location
-              is ideal, with plenty of family-friendly attractions nearby. The staff was friendly and always ready to
-              assist, making our stay stress-free and enjoyable. We'll definitely be back next summer!"
+              "We spent a week at Off Grid Boutique with our two kids, and it was perfect for families. The kids loved
+              the children's activities and the pool, while my wife and I enjoyed the spa and fitness center. The
+              location is ideal, with plenty of family-friendly attractions nearby. The staff was friendly and always
+              ready to assist, making our stay stress-free and enjoyable. We'll definitely be back next summer!"
             </p>
 
             <footer class="text-center pt-4 italic">Michael R., Dallas, TX</footer>
@@ -362,8 +357,8 @@
           <article class="font-primary p-5 max-w-80 hidden xl:block">
             <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
             <div class="text-accent flex flex-row justify-center">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
             </div>
 
             <p class="p-2 mt-4">
@@ -380,8 +375,8 @@
           <article class="font-primary p-5 max-w-80 hidden 2xl:block">
             <div class="border-t-2 border-t-accent rounded-full w-full max-w-80 p-5"></div>
             <div class="text-accent flex flex-row justify-center">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
             </div>
 
             <p class="p-2 mt-4">
@@ -400,29 +395,28 @@
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
         </div>
       </section>
-  </main>
-  <footer class="bg-background text-primary p-3">
-    <div class="grid grid-cols-2 gap-4 m-2">
-      <div>
-        <p id="#" class="text-sm"><i class="fa-regular fa-copyright mr-2"></i>All rights reserved</p>
+    </main>
+    <footer class="bg-background text-primary p-3">
+      <div class="grid grid-cols-2 gap-4 m-2">
+        <div>
+          <p id="#" class="text-sm"><i class="fa-regular fa-copyright mr-2"></i>All rights reserved</p>
+        </div>
+        <div>
+          <p class="text-center ml-2">
+            <i class="fa-brands fa-facebook-f mr-2"></i>
+            <i class="fa-brands fa-square-instagram mr-2"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+          </p>
+        </div>
       </div>
-      <div>
-        <p class="text-center ml-2">
-          <i class="fa-brands fa-facebook-f mr-2"></i>
-          <i class="fa-brands fa-square-instagram mr-2"></i>
-          <i class="fa-brands fa-pinterest-p"></i>
-        </p>
-      </div>
-    </div>
 
-    <p class="ml-2 text-sm">
-      <span class="transition-colors">
-        <a href="#top">Privacy policy</a>&nbsp; &nbsp; <a href="#top">General terms and conditions</a>
-      </span>
-    </p>
-  </footer>
+      <p class="ml-2 text-sm">
+        <span class="transition-colors">
+          <a href="#top">Privacy policy</a>&nbsp; &nbsp; <a href="#top">General terms and conditions</a>
+        </span>
+      </p>
+    </footer>
 
-  <script src="js/scripts.js" defer></script>
-</body>
-
+    <script src="js/scripts.js" defer></script>
+  </body>
 </html>
