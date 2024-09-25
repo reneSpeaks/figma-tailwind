@@ -53,17 +53,20 @@
           <img src="images/logo-no-background.png" alt="Offgridboutique logo" class="h-12" />
         </div>
         <!-- Hamburger Icon for Mobile -->
-        <div id="hamburger" class="md:hidden relative flex">
-          <label class="burger" for="burger">
-            <input type="checkbox" id="burger" />
-            <span></span>
-            <span></span>
-            <span></span>
+        <div id="hamburger" class="md:hidden flex">
+          <label class="burger relative w-10 h-8 bg-transparent cursor-pointer block" for="burger">
+            <input class="hidden" type="checkbox" id="burger" />
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-0"></span>
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-1/2 -translate-y-1/2"></span>
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-full -translate-y-full"></span>
 
             <!-- Dropdown Menu -->
             <div
-              class="dropdown z-50 bg-background bg-opacity-50 w-screen px-8 absolute justify-self-center top-14">
-              <ul class="flex flex-col py-2 text-center">
+              class="dropdown hidden z-50 bg-background bg-opacity-50 w-screen px-10 mx-5 absolute left-1/2 -translate-x-1/2 top-12 shadow-xl">
+              <ul class="flex flex-col py-2 text-center gap-4">
                 <li><a href="#home" class="hover:text-accent">Home</a></li>
                 <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
                 <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
@@ -100,29 +103,29 @@
         </div>
       </section>
       <!-- Slider Section -->
-      <section class="relative overflow-hidden w-screen h-screen bg-background mb-0">
+      <section class="relative overflow-hidden w-screen h-screen bg-background">
         <!-- Slider Container -->
         <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
           <!-- Slide 1 -->
           <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/booknow.jpg" alt="Rooms" />
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/booknow.jpg" alt="Rooms" />
           </div>
           <!-- Slide 2 -->
           <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/finedining.jpg" alt="Fine Dining" />
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/finedining.jpg" alt="Fine Dining" />
           </div>
           <!-- Slide 3 -->
           <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/spa.jpg" alt="Spa" />
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/spa.jpg" alt="Spa" />
           </div>
           <!-- Slide 4 -->
           <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
-            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4" src="img/our-hotel.jpg" alt="Our Hotel" />
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/our-hotel.jpg" alt="Our Hotel" />
           </div>
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center gap-4">
           <button
             class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
             onclick="goToSlide(0)">
@@ -147,7 +150,7 @@
       </section>
 
       <!-- Hotel Information Section -->
-      <section style="background-color: #2f5651" class="text-primary font-primary">
+      <section style="background-color: #2f5651" class="text-primary font-primary pb-8 px-8">
         <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
           <!-- Our Story Section -->
           <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
@@ -166,7 +169,7 @@
               <img
                 src="img/ourstory.jpg"
                 alt="Our Story"
-                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
             </div>
           </div>
 
@@ -177,7 +180,7 @@
               <img
                 src="img/finedining2.jpg"
                 alt="Fine Dining"
-                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
             </div>
             <!-- Text Section -->
             <div class="w-full md:w-1/2">
@@ -207,7 +210,7 @@
               <img
                 src="img/spa2.jpg"
                 alt="Spa"
-                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
             </div>
           </div>
 
@@ -218,7 +221,7 @@
               <img
                 src="img/outdooractivities.jpg"
                 alt="Outdoor Activities"
-                class="infoimages rounded-lg shadow-lg w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
             </div>
             <!-- Text Section (right) -->
             <div class="w-full md:w-1/2">
