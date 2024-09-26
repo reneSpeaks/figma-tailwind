@@ -35,17 +35,26 @@ h6 {
   max-height: 24rem; /* Adjusts to smaller screens for responsive design */
 }
 
-@media (max-width: 768px) {
-  .max-h-96 {
-    max-height: 18rem; /* Smaller image heights for tablet size screens */
+/* Responsive Adjustments */
+/* Book Now Button Container */
+.book-now-container {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;  
+  padding-right: 8px;
+}
+
+/* Large screens - align with hotel information section */
+@media (min-width: 1024px) {
+  .book-now-container {
+    max-width: 1200px;  
+    padding-left: 16px;  
+    padding-right: 16px;
   }
 }
 
-@media (max-width: 640px) {
-  .max-h-96 {
-    max-height: 14rem; /* Smaller image heights for mobile devices */
-  }
-}
 
 /* Burger menu change on click */
 
