@@ -46,180 +46,198 @@
   </script>
 </head>
 
-<body>
-  <header>
-    <div class="bg-background text-white py-4 px-8 flex justify-between items-center">
-      <!-- Logo/Icon -->
-      <div class="logo">
-        <img src="images/logo.jpg" alt="Offgridboutique logo" class="h-12" />
-      </div>
-      <!-- Hamburger Icon for Mobile -->
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-white">
-          <i class="fas fa-bars fa-2x"></i>
-        </button>
-      </div>
-      <!-- Navigation -->
-      <nav id="nav-menu" class="hidden md:flex space-x-6">
-        <ul class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-6">
-          <li><a href="#home" class="hover:text-accent">Home</a></li>
-          <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
-          <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
-          <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
-          <li><a href="#contact" class="hover:text-accent">Contact</a></li>
-        </ul>
-      </nav>
+  <body>
+    <header>
+      <div id="navigation" class="bg-background text-white py-4 px-8 flex justify-between items-center">
+        <!-- Logo/Icon -->
+        <div class="logo">
+          <img src="img/logo-no-background.png" alt="Offgridboutique logo" class="h-12" />
+        </div>
+        <!-- Hamburger Icon for Mobile -->
+        <div id="hamburger" class="md:hidden flex">
+          <label class="burger relative w-10 h-8 bg-transparent cursor-pointer block" for="burger">
+            <input class="hidden" type="checkbox" id="burger" />
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-0"></span>
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-1/2 -translate-y-1/2"></span>
+            <span
+              class="block absolute bg-accent rounded-lg opacity-100 left-0 w-full h-1 rotate-0 ease-in-out duration-300 origin-left top-full -translate-y-full"></span>
 
-      <!-- Book Now Button -->
-      <div>
-        <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <!-- Slider Section -->
-    <section class="relative overflow-hidden w-screen h-screen bg-background mb-0">
-      <!-- Slider Container -->
-      <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
-        <!-- Slide 1 -->
-        <div class="w-full h-full flex-shrink-0">
-          <img class="object-cover w-full h-full" src="img/booknow.jpg" alt="Rooms" />
+            <!-- Dropdown Menu -->
+            <nav
+              class="dropdown hidden z-50 bg-background bg-opacity-50 w-screen px-10 mx-5 absolute left-1/2 -translate-x-1/2 top-12 shadow-xl">
+              <ul class="flex flex-col py-2 text-center gap-4">
+                <li><a href="#home" class="hover:text-accent">Home</a></li>
+                <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
+                <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
+                <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
+                <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+              </ul>
+            </nav>
+          </label>
         </div>
-        <!-- Slide 2 -->
-        <div class="w-full h-full flex-shrink-0">
-          <img class="object-cover w-full h-full" src="img/finedining.jpg" alt="Fine Dining" />
-        </div>
-        <!-- Slide 3 -->
-        <div class="w-full h-full flex-shrink-0">
-          <img class="object-cover w-full h-full" src="img/spa.jpg" alt="Spa" />
-        </div>
-        <!-- Slide 4 -->
-        <div class="w-full h-full flex-shrink-0">
-          <img class="object-cover w-full h-full" src="img/our-hotel.jpg" alt="Our Hotel" />
-        </div>
-      </div>
+        <!-- Navigation -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6">
+          <ul class="flex md:flex-row flex-col space-y-4 md:space-y-0 md:space-x-6">
+            <li><a href="#home" class="hover:text-accent">Home</a></li>
+            <li><a href="#rooms" class="hover:text-accent">Rooms</a></li>
+            <li><a href="#gallery" class="hover:text-accent">Gallery</a></li>
+            <li><a href="#amenities" class="hover:text-accent">Amenities</a></li>
+            <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+          </ul>
+        </nav>
 
-      <!-- Navigation Buttons -->
-      <div class="absolute bottom-10 left-0 right-0 flex justify-center space-x-4">
-        <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-          onclick="goToSlide(0)">
-          Rooms
-        </button>
-        <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-          onclick="goToSlide(1)">
-          Fine Dining
-        </button>
-        <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-          onclick="goToSlide(2)">
-          Spa
-        </button>
-        <button class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
-          onclick="goToSlide(3)">
-          Our Hotel
-        </button>
+        <!-- Book Now Button -->
+        <div>
+          <a href="#book" class="bg-accent text-background px-6 py-2 rounded-full">Book Now</a>
+        </div>
       </div>
-    </section>
-    <section class="container mx-auto py-16">
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="relative bg-cover bg-center h-screen" style="background-image: url('img/hero-1.jpg')">
+        <div class="relative z-10 text-center text-white flex flex-col justify-center items-center h-full">
+          <h1 class="text-5xl font-primary">Welcome to Off Grid Boutique</h1>
+          <p class="text-xl mt-4 font-secondary">Your luxury stay awaits you</p>
+          <a href="#book" class="bg-accent text-background px-8 py-3 mt-6 rounded-full">Explore more</a>
+        </div>
+      </section>
+      <!-- Slider Section -->
+      <section
+        id="slider-section"
+        class="relative overflow-hidden w-screen h-screen bg-background border-t-4 border-accent">
+        <!-- Slider Container -->
+        <div id="slider" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
+          <!-- Slide 1 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/booknow.jpg" alt="Rooms" />
+          </div>
+          <!-- Slide 2 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/finedining.jpg" alt="Fine Dining" />
+          </div>
+          <!-- Slide 3 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/spa.jpg" alt="Spa" />
+          </div>
+          <!-- Slide 4 -->
+          <div class="w-full h-full flex-shrink-0 flex justify-center items-center">
+            <img class="object-cover w-4/5 h-4/5 rounded-lg mx-4 mb-5" src="img/our-hotel.jpg" alt="Our Hotel" />
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center gap-4">
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(0)">
+            Rooms
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(1)">
+            Fine Dining
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(2)">
+            Spa
+          </button>
+          <button
+            class="bg-primary hover:bg-accent text-background font-bold py-2 px-4 rounded font-primary"
+            onclick="goToSlide(3)">
+            Our Hotel
+          </button>
+        </div>
+      </section>
+
       <!-- Hotel Information Section -->
-      <div class="flex flex-wrap justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
-        <!-- Hotel History Section -->
-        <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-          <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-primary font-bold text-background">Our Story</h2>
-            <p class="text-lg text-primary mt-4">
-              Nestled in the heart of nature, our hotel has a rich history dating back to the early 1900s. From its
-              humble beginnings, it has grown into a luxurious retreat where guests can experience comfort, elegance,
-              and tranquility. Our commitment to hospitality has made us a timeless destination for those seeking the
-              perfect escape.
-            </p>
+      <section id="info" class="text-primary font-primary pb-8 px-8 bg-background border-b-4 border-accent">
+        <div class="flex flex-wrap justify-between items-start space-y-8">
+          <!-- Our Story Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-accent">Our Story</h2>
+              <p class="text-lg mt-4">
+                Nestled in the heart of nature, our hotel has a rich history dating back to the early 1900s. From its
+                humble beginnings, it has grown into a luxurious retreat where guests can experience comfort, elegance,
+                and tranquility. Our commitment to hospitality has made us a timeless destination for those seeking the
+                perfect escape.
+              </p>
+            </div>
+            <!-- Image Section with Responsive Sizing -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/ourstory.jpg"
+                alt="Our Story"
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
           </div>
-          <div class="w-full md:w-1/2">
-            <img src="img/ourstory.jpg" alt="Our Story"
-              class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
+
+          <!-- Fine Dining Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Image Section with Responsive Sizing -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/finedining2.jpg"
+                alt="Fine Dining"
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-accent">Fine Dining</h2>
+              <p class="text-lg mt-4">
+                Our fine dining restaurant offers an exceptional culinary experience. From locally sourced ingredients
+                to expertly crafted dishes, each meal is a celebration of flavor and creativity. Enjoy your meal in an
+                intimate setting with views that enhance the gourmet experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Spa Experience Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Text Section (left) -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-accent">Our Spa</h2>
+              <p class="text-lg mt-4">
+                Rejuvenate your mind, body, and soul at our award-winning spa. Step into a world of tranquility where
+                luxurious treatments meet natural serenity. Whether you're enjoying a calming massage, an invigorating
+                facial, or a peaceful soak in our heated outdoor pool, our spa is designed to restore balance and
+                harmony.
+              </p>
+            </div>
+            <!-- Image Section (right) -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/spa2.jpg"
+                alt="Spa"
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+          </div>
+
+          <!-- Outdoor Activities Section -->
+          <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Image Section (left) -->
+            <div class="w-full md:w-1/2">
+              <img
+                src="img/outdooractivities.jpg"
+                alt="Outdoor Activities"
+                class="rounded-lg shadow-lg w-full max-w-full h-auto max-h-96 object-cover transform hover:scale-105 transition duration-500 ease-in-out" />
+            </div>
+            <!-- Text Section (right) -->
+            <div class="w-full md:w-1/2">
+              <h2 class="text-3xl font-bold text-accent">Outdoor Activities</h2>
+              <p class="text-lg mt-4">
+                Our outdoor activities are designed to bring you closer to nature. Whether you're hiking in the
+                mountains, enjoying a campfire under the stars, or simply taking a stroll through our scenic grounds,
+                you'll find plenty of ways to connect with the great outdoors.
+              </p>
+            </div>
           </div>
         </div>
-
-        <!-- Fine Dining Section -->
-        <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-          <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-primary font-bold text-background">Fine Dining</h2>
-            <p class="text-lg text-primary mt-4">
-              Our fine dining restaurant offers an exceptional culinary experience. From locally sourced ingredients
-              to expertly crafted dishes, each meal is a celebration of flavor and creativity. Enjoy your meal in an
-              intimate setting with views that enhance the gourmet experience.
-            </p>
-          </div>
-          <div class="w-full md:w-1/2">
-            <img src="img/finedining2.jpg" alt="Fine Dining"
-              class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
-          </div>
-        </div>
-
-        <!-- Spa Experience Section -->
-        <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-          <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-primary font-bold text-background">Our Spa</h2>
-            <p class="text-lg text-primary mt-4">
-              Rejuvenate your mind, body, and soul at our award-winning spa. Step into a world of tranquility where
-              luxurious treatments meet natural serenity. Whether you're enjoying a calming massage, an invigorating
-              facial, or a peaceful soak in our heated outdoor pool, our spa is designed to restore balance and
-              harmony.
-            </p>
-          </div>
-          <div class="w-full md:w-1/2">
-            <img src="img/spa2.jpg" alt="Spa"
-              class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
-          </div>
-        </div>
-
-        <!-- Outdoor Activities Section -->
-        <div class="w-full flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
-          <div class="w-full md:w-1/2">
-            <h2 class="text-3xl font-primary font-bold text-background">Outdoor Activities</h2>
-            <p class="text-lg text-primary mt-4">
-              Our outdoor activities are designed to bring you closer to nature. Whether you're hiking in the
-              mountains, enjoying a campfire under the stars, or simply taking a stroll through our scenic grounds,
-              you'll find plenty of ways to connect with the great outdoors.
-            </p>
-          </div>
-          <div class="w-full md:w-1/2">
-            <img src="img/outdooractivities.jpg" alt="Outdoor Activities"
-              class="rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out w-full object-cover" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Closing Remark -->
-      <div class="text-center mt-16">
-        <p class="text-2xl font-primary font-bold text-background text-primary mt-4">
-          At Off Grid Boutique Hotel, we are more than just a place to stay – we are a destination. Discover the
-          perfect balance of luxury, comfort, and adventure. Your unforgettable experience awaits.
-        </p>
-      </div>
-    </section>
-
-    <!-- "Book a Room" Section -->
-    <section class="relative w-full h-screen bg-cover bg-center mb-2" style="background-image: url('img/rooms4.jpg')">
-      <!-- Overlay for darker background -->
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center">
-        <!-- Title -->
-        <h1 class="text-accent font-primary text-5xl sm:text-6xl md:text-7xl font-bold mb-8">Book a Room</h1>
-
-        <!-- Buttons -->
-        <div class="space-x-4">
-          <!-- Book Now Button -->
-          <button
-            class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out">
-            Book Now
-          </button>
-          <!-- Check Availability Button -->
-          <button
-            class="bg-primary hover:bg-accent text-background font-bold py-3 px-6 rounded-lg font-primary text-lg transition duration-300 ease-in-out">
-            Check Availability
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section id="masonry" class="flex flex-col items-center mt-5">
       <div class="border-t-2 border-t-background rounded-full w-full max-w-[700px] p-5"></div>
@@ -297,12 +315,12 @@
               class="fa-solid fa-star"></i> <i class="fa-solid fa-star-half-stroke"></i>
           </div>
 
-          <p class="p-2 mt-4">
-            "My stay at [Hotel Name] was simply magical! From the moment we arrived, the staff went above and beyond
-            to make sure we felt welcome. The rooms were spotless, and the view from our balcony was breathtaking. The
-            proximity to local attractions made it easy for us to explore, but we were just as happy lounging by the
-            beautiful pool. Can't wait to come back!"
-          </p>
+            <p class="p-2 mt-4">
+              "My stay at Off Grid Boutique was simply magical! From the moment we arrived, the staff went above and
+              beyond to make sure we felt welcome. The rooms were spotless, and the view from our balcony was
+              breathtaking. The proximity to local attractions made it easy for us to explore, but we were just as happy
+              lounging by the beautiful pool. Can't wait to come back!"
+            </p>
 
           <footer class="text-center pt-4 italic">Sarah P., New York, NY</footer>
           <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
@@ -333,12 +351,12 @@
               class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
           </div>
 
-          <p class="p-2 mt-4">
-            "We spent a week at [Hotel Name] with our two kids, and it was perfect for families. The kids loved the
-            children's activities and the pool, while my wife and I enjoyed the spa and fitness center. The location
-            is ideal, with plenty of family-friendly attractions nearby. The staff was friendly and always ready to
-            assist, making our stay stress-free and enjoyable. We'll definitely be back next summer!"
-          </p>
+            <p class="p-2 mt-4">
+              "We spent a week at Off Grid Boutique with our two kids, and it was perfect for families. The kids loved
+              the children's activities and the pool, while my wife and I enjoyed the spa and fitness center. The
+              location is ideal, with plenty of family-friendly attractions nearby. The staff was friendly and always
+              ready to assist, making our stay stress-free and enjoyable. We'll definitely be back next summer!"
+            </p>
 
           <footer class="text-center pt-4 italic">Michael R., Dallas, TX</footer>
           <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
@@ -351,12 +369,12 @@
               class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
           </div>
 
-          <p class="p-2 mt-4">
-            "I often travel for work, and [Hotel Name] was the best hotel I've stayed at in years. The rooms were
-            quiet and comfortable, making it easy to focus and unwind after long meetings. The business center had
-            everything I needed, and the hotel's central location meant I could walk to most of my appointments. Fast
-            Wi-Fi, great room service, and a friendly staff – highly recommend for business travelers!"
-          </p>
+            <p class="p-2 mt-4">
+              "I often travel for work, and Off Grid Boutique was the best hotel I've stayed at in years. The rooms were
+              quiet and comfortable, making it easy to focus and unwind after long meetings. The business center had
+              everything I needed, and the hotel's central location meant I could walk to most of my appointments. Fast
+              Wi-Fi, great room service, and a friendly staff – highly recommend for business travelers!"
+            </p>
 
           <footer class="text-center pt-4 italic">David K., San Francisco, CA</footer>
           <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>
@@ -369,12 +387,12 @@
               class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>
           </div>
 
-          <p class="p-2 mt-4">
-            "I can't say enough good things about our stay at [Hotel Name]. The attention to detail, from the
-            beautifully designed rooms to the exceptional customer service, made our vacation unforgettable. The
-            concierge gave us fantastic recommendations for local dining and activities. Whether you're looking for
-            luxury, comfort, or convenience, this hotel delivers on all fronts. We'll definitely be returning!"
-          </p>
+            <p class="p-2 mt-4">
+              "I can't say enough good things about our stay at Off Grid Boutique. The attention to detail, from the
+              beautifully designed rooms to the exceptional customer service, made our vacation unforgettable. The
+              concierge gave us fantastic recommendations for local dining and activities. Whether you're looking for
+              luxury, comfort, or convenience, this hotel delivers on all fronts. We'll definitely be returning!"
+            </p>
 
           <footer class="text-center pt-4 italic">Jessica M., London, UK</footer>
           <div class="border-b-2 border-b-accent rounded-full w-full max-w-80 p-5"></div>

@@ -28,3 +28,44 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+/* RESPONSIVENESS FOR NESRIN IMAGES */
+
+.max-h-96 {
+  max-height: 24rem; /* Adjusts to smaller screens for responsive design */
+}
+
+@media (max-width: 768px) {
+  .max-h-96 {
+    max-height: 18rem; /* Smaller image heights for tablet size screens */
+  }
+}
+
+@media (max-width: 640px) {
+  .max-h-96 {
+    max-height: 14rem; /* Smaller image heights for mobile devices */
+  }
+}
+
+/* Burger menu change on click */
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.burger input:checked ~ .dropdown {
+  display: block;
+}
